@@ -12,8 +12,8 @@ strategy_description = '''\
 Collude first round. Collude, except in a round after getting 
 a severe punishment.'''
     
-def move(my_history, their_history, my_score, their_score):
-    '''Make my move based on the history with this player.
+
+'''Make my move based on the history with this player.
     
     history: a string with one letter (c or b) per round that has been played with this opponent.
     their_history: a string of the same length as history, possibly empty. 
@@ -22,6 +22,7 @@ def move(my_history, their_history, my_score, their_score):
     
     Returns 'c' or 'b' for collude or betray.
     '''
+def move(my_history, their_history, my_score, their_score):
     if len(my_history)==0: # It's the first round; collude.
         return 'c'
     elif my_history[-1]=='c' and their_history[-1]=='b':
