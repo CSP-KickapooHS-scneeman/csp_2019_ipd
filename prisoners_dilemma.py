@@ -34,12 +34,18 @@ import random
 import os.path              
     
 import example0, example1, example2, example3
-import example4, example5, example6, team_wayne
+
+import example4, example5, example6, Team_Aiden, team_wayne
+=======
+
 
 betray = example1
 collude = example0
 
-modules = [team_wayne, example0, example1, example2, example3, example4, example5, example6]
+
+modules = [example0, example1, example2, example3, example4, example5, example6, Team_Aiden, team_wayne]
+=======
+
 for module in modules:
     reload(module)
     print ('reloaded',module)
