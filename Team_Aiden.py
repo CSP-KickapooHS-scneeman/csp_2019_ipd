@@ -1,5 +1,5 @@
 team_name = 'Team_Aiden'
-strategy_name = 'Collude until betrayed'
+strategy_name = 'Undecided'
 strategy_description = '''\
 Collude first round. Collude, unless betrayed; then retaliate. Resume collusion.'''
     
@@ -13,10 +13,12 @@ def move(my_history, their_history, my_score, their_score):
     
     Returns 'c' or 'b' for collude or betray.
     '''
-    if 'b' in their_history:
-        if their_history[-1] == 'c' and my_history[-1] == 'b':
+    if len(their_history) < 5:
+        return 'c'
+    elif their_history[-1] == their_history[-3] and their_history[-3] == their_history[-5] and their_history[-1] != their_history[-2] and their_history[-2] == their_history[-4]:
+            return 'b'
+    else:
+        if 'b' in their_history:
             return 'b'
         else:
             return 'c'
-    else:
-        return 'c'
