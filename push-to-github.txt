@@ -1,0 +1,6 @@
+# ==================== How to Push to Github ====================
+# In 'bash', use command 'git add .'
+# Will look like nothing happened.
+# In 'bash', use command 'git commit -m "testing this first time"'
+# In 'bash', use command 'git push origin master'
+# Type username and password.
